@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4ca1af, #c4e0e5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.sidebar {
+    background-color: #57c1a1;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    z-index: 2;
+}
+
+.sidebar-item {
+    padding: 20px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-item img {
+    width: 24px;  
+    height: 24px; 
+}
+
+.sidebar-item.active {
+    background-color: #4ca1af;
+    border-radius: 5px;
+}
+
+.profile-card {
+    background: white;
+    padding: 30px;
+    width: calc(100% - 80px); 
+    margin-left: -20px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.profile-card h2 {
+    margin-top: 0;
+    color: #57c1a1;
+}
+
+.info-item {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 20px;
+}
+
+.info-item img {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.info-item label {
+    flex: 1;
+    margin-right: 10px;
+    min-width: 80px; 
+}
+
+.info-item input {
+    flex: 2;
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid #ccc; 
+    background: transparent; 
+    border-radius: 0; 
+    outline: none; 
+    width: 100%; 
+    box-sizing: border-box; 
+    vertical-align: middle; 
+}
+
+.info-item input:focus {
+    border-bottom: 2px solid #57c1a1; 
+}
+
+.info-item button {
+    margin-left: 50px;
+    background-color: #57c1a1;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.info-item button:hover {
+    background-color: #4ca1af;
+}
+
+.promo {
+    background-color: #57c1a1;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 3;
+}
+
+.promo:hover {
+    transform: translateY(-50%) rotate(90deg);
+}
